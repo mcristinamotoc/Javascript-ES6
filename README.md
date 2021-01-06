@@ -13,7 +13,7 @@ function toCelsius(fahrenheit) {
    return (5/9) * (fahrenheit-32);
 }
 
-## // This function returns a string padded with leading zeros
+ // This function returns a string padded with leading zeros
 
 function padZeros(num, totalLen) {
 
@@ -42,10 +42,9 @@ function power(base, exponent) {
 
 ##
 function greet(who) {
-
     console.log("Hello " + who);
+    
 }
-
 
 ## Exercici 2
 ### Arregla l'error del següent bloc de codi:
@@ -76,7 +75,7 @@ var users =
 
 var epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
 
-Resultat per consola: 'a long time ago in a galaxy far far away'
+### Resultat per consola: 'a long time ago in a galaxy far far away'
 
 Nota: no fa falta fer un "join".
 
@@ -99,7 +98,7 @@ funtion a() {
 }
 
 ## Exercici 6
-Tenim un array de tasques i volem aconseguir un array que contingui únicament els noms de les tasques. 
+### Tenim un array de tasques i volem aconseguir un array que contingui únicament els noms de les tasques. 
 
 
 - Usar .forEach() per obtenir aquest array.
