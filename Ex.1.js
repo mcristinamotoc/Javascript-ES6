@@ -23,8 +23,8 @@ console.log(toCelsius(20));
 
 /* ------------------------------------------------------------------------------------
 3) This function returns a string padded with leading zeros
-function padZeros(num, totalLen) {
 
+function padZeros(num, totalLen) {
     var numStr = num.toString();
     var numZeros = totalLen - numStr.length;
     for (var i = 1; i <= numZeros; i++) {
