@@ -1,0 +1,76 @@
+<!-- /*Exercici 8) 
+    Modificar l 'exercici anterior perquè els números s' introdueixin a través d 'un formulari (amb validacions), i que la taula de multiplicar la mostri en una taula HTML*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex.8 </title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h2>Escoge dos numeros</h2>
+
+        <form action="" id="form" method="GET" onsubmit="return multiply()">
+            <div class="md-form mb-4 w-25">
+                <label for="n1">Number One</label>
+                <input type="number" id="n1" class="form-control validate" required>
+            </div>
+
+            <div class="md-form mb-4 w-25 ">
+                <label for="n2">Number Two</label>
+                <input type="number" id="n2" class="form-control validate" required>
+            </div>
+            <button type="submit" value="submit">Submit</button>
+        </form>
+        </jumbotron>
+
+
+        <script type="text/javascript">
+
+            const multiply = (n1, n2) => {
+
+                var n1 = document.getElementById("n1").value;
+                var n2 = document.getElementById("n2").value;
+                for (var i = 1; i <= n2; i++) {
+                    var result = n1 * i;
+
+                    var table = "";
+                    var rows = (i <= n2);
+                    for (var r = 0; r < rows; r++) {
+                        table += '<tr>';
+
+                        for (var c=0; c < 1; c++) {
+                            table += '<td width=100>' + n1 + " x " + i + " = " + result + '</td>';
+                        }
+                        table += '</tr>';
+                    }
+                    document.write('<table border=1>' + table + '</table>');
+                }
+            }
+            multiply();
+
+        </script>
+
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js "
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n "
+            crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo "
+            crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 "
+            crossorigin="anonymous "></script>
+</body>
+
+</html>
